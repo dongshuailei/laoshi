@@ -1,0 +1,1194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./index.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <script src="echarts.min.js"></script>
+  <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.js"></script>
+</head>
+
+<body>
+  <div class="box">
+    <h3>待办事项</h3>
+    <div class="box-z">
+      <div class="color-0" style="display: flex;">
+        <h4>待发货订单</h4>
+        <span>单位(笔)</span>
+        <i>4</i>
+      </div>
+      <div class="color-1" style="display: flex;">
+        <h4>待处理售后</h4>
+        <span>单位(笔)</span>
+        <i>0</i>
+      </div>
+      <div class="color-2" style="display: flex;">
+        <h4>待付款订单</h4>
+        <span>单位(笔)</span>
+        <i>113</i>
+      </div>
+      <div class="color-3" style="display: flex;">
+        <h4>待补货商品</h4>
+        <span>单位(个)</span>
+        <i>0</i>
+      </div>
+      <div class="color-4" style="display: flex;">
+        <h4>待审核会员</h4>
+        <span>单位(个)</span>
+        <i>0</i>
+      </div>
+      <div class="color-5" style="display: flex;">
+        <h4>待审核佣金</h4>
+        <span>单位(元)</span>
+        <i>948.19</i>
+      </div>
+    </div>
+    <div class="box-x">
+      <div class="box-c">
+        <h3 style="display: flex;">新增会员</h3>
+        <button style="display: flex;" id="a1" onclick="a1(),sfun(1)" class="q qq">今天</button>
+        <button style="display: flex;" id="a2" onclick="a2(),sfun(2)" class="qq">昨天</button>
+        <button style="display: flex;" id="a3" onclick="a3(),sfun(3)" class="qq">近7日</button>
+        <button style="display: flex;" id="a4" onclick="a4(),sfun(4)" class="qq">近30日</button>
+      </div>
+      <script>
+        function sfun(z) {
+          for (let i = 0; i < $('.q').length; i++) {
+            $(`.q:eq(${i})`).attr('class', 'qq')
+          }
+          $(`.qq:eq(${z - 1})`).attr('class', 'q')
+        }
+        function as(b) {
+          for (let i = 0; i < $('.w').length; i++) {
+            $(`.w:eq(${i})`).attr('class', 'zz')
+          }
+          $(`.zz:eq(${b - 1})`).attr('class', 'w')
+        }
+        function asa(g) {
+          for (let i = 0; i < $('.s').length; i++) {
+            $(`.s:eq(${i})`).attr('class', 'ss')
+          }
+          $(`.ss:eq(${g - 1})`).attr('class', 's')
+        }
+      </script>
+      <div id="max" style="width: 925px;height: 380px;"></div>
+      <div id="max2" style="width: 925px;height: 380px;"></div>
+      <div id="max3" style="width: 925px;height: 380px;"></div>
+      <div id="max4" style="width: 925px;height: 380px;"></div>
+    </div>
+    <div class="box-v">
+      <div class="box-b">
+        <h3 style="display: flex;">新增订单</h3>
+        <button style="display: flex;" id="a5" onclick="a5(),as(1)" class="w zz">今天</button>
+        <button style="display: flex;" id="a6" onclick="a6(),as(2)" class="zz">昨天</button>
+        <button style="display: flex;" id="a7" onclick="a7(),as(3)" class="zz">近7日</button>
+        <button style="display: flex;" id="a8" onclick="a8(),as(4)" class="zz">近30日</button>
+      </div>
+      <script>
+
+      </script>
+
+      <div id="max5" style="width: 925px;height: 380px;"></div>
+      <div id="max6" style="width: 925px;height: 380px;"></div>
+      <div id="max7" style="width: 925px;height: 380px;"></div>
+      <div id="max8" style="width: 925px;height: 380px;"></div>
+    </div>
+    <div class="box-n">
+      <div class="box-m">
+        <h3>运营数据</h3>
+      </div>
+      <div class="z" style="display: flex;">
+        <h4>成交金额(元)</h4>
+        <span>796</span>
+        <i>较昨日<p>🔺30.6%</p></i>
+      </div>
+      <div class="z" style="display: flex;">
+        <h4>退款金额(元)</h4>
+        <span>0</span>
+        <i>较昨日<p>🔺100%</p></i>
+      </div>
+      <div class="z" style="display: flex;">
+        <h4>支付订单数(笔)</h4>
+        <span>4</span>
+        <i>较昨日<p>🔺100%</p></i>
+      </div>
+      <div class="z" style="display: flex;">
+        <h4>支付人数(人)</h4>
+        <span>4</span>
+        <i>较昨日<p>🔺0.5%</p></i>
+      </div>
+      <div class="z" style="display: flex;">
+        <h4>客单价(元)</h4>
+        <span>199</span>
+        <i>较昨日<p>🔻-34.6%</p></i>
+      </div>
+      <div class="z" style="display: flex;">
+        <h4>笔单价(元)</h4>
+        <span>199</span>
+        <i>较昨日<p>🔻-34.6%</p></i>
+      </div>
+    </div>
+    <div class="zxz">
+      <div class="zxczxc">
+        <span>2023-5-12</span>
+        <span>2023-5-12</span>
+        <button style="display: flex;" id="a9" onclick="a9(),asa(1)" class="s ss">今天</button>
+        <button style="display: flex;" id="a10" onclick="a10(),asa(2)" class="ss">昨天</button>
+        <button style="display: flex;" id="a11" onclick="a11(),asa(3)" class="ss">近7日</button>
+        <button style="display: flex;" id="a12" onclick="a12(),asa(4)" class="ss">近30日</button>
+      </div>
+      <div id="max9" style="width: 1295px;height: 380px;"></div>
+      <div id="max10" style="width: 1295px;height: 380px;"></div>
+      <div id="max11" style="width: 1295px;height: 380px;"></div>
+      <div id="max12" style="width: 1295px;height: 380px;"></div>
+    </div>
+  </div>
+
+</body>
+<script>
+  (function () {
+    a1();
+    a5();
+    a9()
+  })();
+  function a1() {
+    $("#max").css("display", "block");
+    $("#max2").css("display", "none");
+    $("#max3").css("display", "none");
+    $("#max4").css("display", "none");
+    var chartDom = document.getElementById("max");
+    var myChart = echarts.init(chartDom);
+    var option;
+    const data = [
+      ["00:00", 1],
+      ["03:00", 2],
+      ["06:00", 12],
+      ["09:00", 23],
+      ["12:00", 44],
+      ["15:00", 32],
+      ["18:00", 18],
+      ["21:00", 5],
+    ];
+    let str = 0
+    for (let i = 0; i < data.length; i++) {
+      str += data[i][1]
+      // console.log(data[i][1]);
+
+    }
+    console.log(str);
+    $('.akkl h3').html(str + 'KB')
+    const dateList = data.map(function (item) {
+      return item[0];
+    });
+    const valueList = data.map(function (item) {
+      return item[1];
+    });
+    option = {
+      color: ["#61CBB9"],
+      legend: {
+        type: "plain",
+        data: ['新增会员',]
+      },
+      visualMap: [
+        {
+          show: false,
+          type: "continuous",
+          seriesIndex: 0,
+          min: 0,
+          max: 400,
+        },
+      ],
+      title: [
+        {
+          left: "center",
+          text: "",
+        },
+      ],
+      tooltip: {
+        trigger: "axis",
+      },
+      xAxis: [
+        {
+          data: dateList,
+        },
+      ],
+      yAxis: [{
+        name: '单位(人)'
+      }],
+      series: [
+        {
+          name: '新增会员',
+          type: 'line',
+          smooth: true,
+          showSymbol: false,
+          data: valueList,
+          areaStyle: {
+            color: 'rgba(97, 203, 185,0.3)'
+          },
+        },
+      ],
+    };
+    option && myChart.setOption(option);
+  }
+
+  function a2() {
+    $("#max").css("display", "none");
+    $("#max2").css("display", "block");
+    $("#max3").css("display", "none");
+    $("#max4").css("display", "none");
+    var chartDom = document.getElementById("max2");
+    var myChart = echarts.init(chartDom);
+    var option;
+    const data = [
+      ["00:00", 0],
+      ["03:00", 44],
+      ["06:00", 88],
+      ["09:00", 110],
+      ["12:00", 100],
+      ["15:00", 98],
+      ["18:00", 77],
+      ["21:00", 67],
+    ];
+    let str = 0
+    for (let i = 0; i < data.length; i++) {
+      str += data[i][1]
+      // console.log(data[i][1]);
+
+    }
+    console.log(str);
+    $('.akkl h3').html(str + 'KB')
+    const dateList = data.map(function (item) {
+      return item[0];
+    });
+    const valueList = data.map(function (item) {
+      return item[1];
+    });
+    option = {
+      color: ["#61CBB9"],
+      legend: {
+        type: "plain",
+        data: ['新增会员',]
+      },
+      visualMap: [
+        {
+          show: false,
+          type: "continuous",
+          seriesIndex: 0,
+          min: 0,
+          max: 400,
+        },
+      ],
+      title: [
+        {
+          left: "center",
+          text: "",
+        },
+      ],
+      tooltip: {
+        trigger: "axis",
+      },
+      xAxis: [
+        {
+          data: dateList,
+        },
+      ],
+      yAxis: [{ name: '单位(人)' }],
+      series: [
+        {
+          name: '新增会员',
+          type: 'line',
+          smooth: true,
+          showSymbol: false,
+          data: valueList,
+          areaStyle: {
+            color: 'rgba(97, 203, 185,0.3)'
+          },
+        },
+      ],
+    };
+    option && myChart.setOption(option);
+  }
+
+  function a3() {
+    $("#max").css("display", "none");
+    $("#max2").css("display", "none");
+    $("#max3").css("display", "block");
+    $("#max4").css("display", "none");
+
+    var chartDom = document.getElementById("max3");
+    var myChart = echarts.init(chartDom);
+    var option;
+    const data = [
+      ["2023-04-30", 431, 411],
+      ["2023-05-01", 327, 307],
+      ["2023-05-02", 357, 327],
+      ["2023-05-03", 352, 342],
+      ["2023-05-04", 304, 324],
+      ["2023-05-05", 184, 164],
+      ["2023-05-06", 389, 349],
+      ["2023-05-07", 426, 356],
+      ["2023-05-08", 74, 54],
+    ];
+    let str = 0
+    for (let i = 0; i < data.length; i++) {
+      str += data[i][1]
+      // console.log(data[i][1]);
+
+    }
+    console.log(str);
+    $('.akkl h3').html(str + 'KB')
+    let str1 = 0
+    for (let i = 0; i < data.length; i++) {
+      str1 += data[i][2]
+      // console.log(data[i][1]);
+
+    }
+    console.log(str);
+    $('.akkl1 h3').html(str1 + 'KB')
+    const dateList = data.map(function (item) {
+      return item[0];
+    });
+    const valueList = data.map(function (item) {
+      return item[1];
+    });
+    const valueList2 = data.map(function (item) {
+      return item[2];
+    });
+    option = {
+      color: ["#61CBB9", "#61CBB9"],
+      legend: {
+        type: "plain",
+        data: ['新增会员',]
+      },
+      // Make gradient line here
+      visualMap: [
+        {
+          show: false,
+          type: "continuous",
+          seriesIndex: 0,
+          min: 0,
+          max: 400,
+        },
+      ],
+      title: [
+        {
+          left: "center",
+          text: "",
+        },
+      ],
+      tooltip: {
+        trigger: "axis",
+      },
+      xAxis: [
+        {
+          data: dateList,
+        },
+      ],
+      yAxis: [{ name: '单位(人)' }],
+      series: [
+        {
+          name: '新增会员',
+          type: 'line',
+          smooth: true,
+          showSymbol: false,
+          data: valueList,
+          areaStyle: {
+            color: 'rgba(97, 203, 185,0.3)'
+          },
+        },
+      ],
+    };
+    option && myChart.setOption(option);
+  }
+  function a4() {
+    $("#max").css("display", "none");
+    $("#max2").css("display", "none");
+    $("#max3").css("display", "none");
+    $("#max4").css("display", "block");
+    var chartDom = document.getElementById("max4");
+    var myChart = echarts.init(chartDom);
+    var option;
+    const data = [
+      ["2023-05-07", 113, 72],
+      ["2023-05-11", 355, 79],
+      ["2023-05-15", 109, 92],
+      ["2023-05-19", 250, 69],
+      ["2023-05-23", 326, 90],
+      ["2023-05-27", 302, 142],
+      ["2023-05-01", 311, 74],
+      ["2023-05-05", 304, 113],
+    ];
+    let str = 0
+    for (let i = 0; i < data.length; i++) {
+      str += data[i][1]
+      // console.log(data[i][1]);
+
+    }
+    console.log(str);
+    $('.akkl h3').html(str + 'KB')
+    let str1 = 0
+    for (let i = 0; i < data.length; i++) {
+      str1 += data[i][2]
+      // console.log(data[i][1]);
+
+    }
+    console.log(str);
+    $('.akkl1 h3').html(str1 + 'KB')
+    const dateList = data.map(function (item) {
+      return item[0];
+    });
+    const valueList = data.map(function (item) {
+      return item[1];
+    });
+    const valueList2 = data.map(function (item) {
+      return item[2];
+    });
+    option = {
+      color: ["#61CBB9", "#61CBB9"],
+      visualMap: [
+        {
+          show: false,
+          type: "continuous",
+          seriesIndex: 0,
+          min: 0,
+          max: 400,
+        },
+      ],
+      legend: {
+        type: "plain",
+        data: ['新增会员',]
+      },
+      title: [
+        {
+          left: "center",
+          text: "",
+        },
+      ],
+      tooltip: {
+        trigger: "axis",
+      },
+      xAxis: [
+        {
+          data: dateList,
+        },
+      ],
+      yAxis: [
+        {
+          name: '单位(人)',
+          type: "value",
+          axisLabel: {
+            formatter: (value, index) => {
+              return `${value / 1000}k`;
+            },
+          },
+        },
+      ],
+      series: [
+        {
+          name: '新增会员',
+          type: 'line',
+          smooth: true,
+          showSymbol: false,
+          data: valueList,
+          areaStyle: {
+            color: 'rgba(97, 203, 185,0.3)'
+          },
+        },
+      ],
+    };
+    option && myChart.setOption(option);
+  }
+
+
+
+  function a5() {
+    $("#max5").css("display", "block");
+    $("#max6").css("display", "none");
+    $("#max7").css("display", "none");
+    $("#max8").css("display", "none");
+    var chartDom = document.getElementById("max5");
+    var myChart = echarts.init(chartDom);
+    var option;
+    const data = [
+      ["00:00", 1],
+      ["03:00", 2],
+      ["06:00", 12],
+      ["09:00", 23],
+      ["12:00", 44],
+      ["15:00", 35],
+      ["18:00", 23],
+      ["21:00", 12],
+    ];
+    let str = 0
+    for (let i = 0; i < data.length; i++) {
+      str += data[i][1]
+      // console.log(data[i][1]);
+
+    }
+    console.log(str);
+    $('.akkl h3').html(str + 'KB')
+    const dateList = data.map(function (item) {
+      return item[0];
+    });
+    const valueList = data.map(function (item) {
+      return item[1];
+    });
+    option = {
+      color: ["#94bdf9"],
+      legend: {
+        type: "plain",
+        data: ['新增订单',]
+      },
+      visualMap: [
+        {
+          show: false,
+          type: "continuous",
+          seriesIndex: 0,
+          min: 0,
+          max: 400,
+        },
+      ],
+      title: [
+        {
+          left: "center",
+          text: "",
+        },
+      ],
+      tooltip: {
+        trigger: "axis",
+      },
+      xAxis: [
+        {
+          data: dateList,
+        },
+      ],
+      yAxis: [{
+        name: '单位(笔)'
+      }],
+      series: [
+        {
+          name: '新增订单',
+          type: 'bar',
+          smooth: true,
+          showSymbol: false,
+          data: valueList,
+          areaStyle: {
+            color: 'rgba(97, 203, 185,0.3)'
+          },
+        },
+      ],
+    };
+    option && myChart.setOption(option);
+  }
+
+  function a6() {
+    $("#max5").css("display", "none");
+    $("#max6").css("display", "block");
+    $("#max7").css("display", "none");
+    $("#max8").css("display", "none");
+    var chartDom = document.getElementById("max6");
+    var myChart = echarts.init(chartDom);
+    var option;
+    const data = [
+      ["00:00", 0],
+      ["03:00", 1],
+      ["06:00", 0],
+      ["09:00", 3],
+      ["12:00", 0],
+      ["15:00", 0],
+      ["18:00", 0],
+      ["21:00", 0],
+    ];
+    let str = 0
+    for (let i = 0; i < data.length; i++) {
+      str += data[i][1]
+      // console.log(data[i][1]);
+
+    }
+    console.log(str);
+    $('.akkl h3').html(str + 'KB')
+    const dateList = data.map(function (item) {
+      return item[0];
+    });
+    const valueList = data.map(function (item) {
+      return item[1];
+    });
+    option = {
+      color: ["#94bdf9"],
+      legend: {
+        type: "plain",
+        data: ['新增订单',]
+      },
+      visualMap: [
+        {
+          show: false,
+          type: "continuous",
+          seriesIndex: 0,
+          min: 0,
+          max: 400,
+        },
+      ],
+      title: [
+        {
+          left: "center",
+          text: "",
+        },
+      ],
+      tooltip: {
+        trigger: "axis",
+      },
+      xAxis: [
+        {
+          data: dateList,
+        },
+      ],
+      yAxis: [{ name: '单位(笔)' }],
+      series: [
+        {
+          name: '新增订单',
+          type: 'bar',
+          smooth: true,
+          showSymbol: false,
+          data: valueList,
+          areaStyle: {
+            color: 'rgba(97, 203, 185,0.3)'
+          },
+        },
+      ],
+    };
+    option && myChart.setOption(option);
+  }
+
+  function a7() {
+    $("#max5").css("display", "none");
+    $("#max6").css("display", "none");
+    $("#max7").css("display", "block");
+    $("#max8").css("display", "none");
+
+    var chartDom = document.getElementById("max7");
+    var myChart = echarts.init(chartDom);
+    var option;
+    const data = [
+      ["2023-04-30", 431, 411],
+      ["2023-05-01", 327, 307],
+      ["2023-05-02", 357, 327],
+      ["2023-05-03", 352, 342],
+      ["2023-05-04", 304, 324],
+      ["2023-05-05", 184, 164],
+      ["2023-05-06", 389, 349],
+      ["2023-05-07", 426, 356],
+      ["2023-05-08", 74, 54],
+    ];
+    let str = 0
+    for (let i = 0; i < data.length; i++) {
+      str += data[i][1]
+      // console.log(data[i][1]);
+
+    }
+    console.log(str);
+    $('.akkl h3').html(str + 'KB')
+    let str1 = 0
+    for (let i = 0; i < data.length; i++) {
+      str1 += data[i][2]
+      // console.log(data[i][1]);
+
+    }
+    console.log(str);
+    $('.akkl1 h3').html(str1 + 'KB')
+    const dateList = data.map(function (item) {
+      return item[0];
+    });
+    const valueList = data.map(function (item) {
+      return item[1];
+    });
+    const valueList2 = data.map(function (item) {
+      return item[2];
+    });
+    option = {
+      color: ["#94bdf9", "#7dbd3f"],
+      legend: {
+        type: "plain",
+        data: ['新增订单',]
+      },
+      // Make gradient line here
+      visualMap: [
+        {
+          show: false,
+          type: "continuous",
+          seriesIndex: 0,
+          min: 0,
+          max: 400,
+        },
+      ],
+      title: [
+        {
+          left: "center",
+          text: "",
+        },
+      ],
+      tooltip: {
+        trigger: "axis",
+      },
+      xAxis: [
+        {
+          data: dateList,
+        },
+      ],
+      yAxis: [{ name: '单位(笔)' }],
+      series: [
+        {
+          name: '新增订单',
+          type: 'bar',
+          smooth: true,
+          showSymbol: false,
+          data: valueList,
+          areaStyle: {
+            color: 'rgba(97, 203, 185,0.3)'
+          },
+        },
+
+      ],
+    };
+    option && myChart.setOption(option);
+  }
+  function a8() {
+    $("#max5").css("display", "none");
+    $("#max6").css("display", "none");
+    $("#max7").css("display", "none");
+    $("#max8").css("display", "block");
+    var chartDom = document.getElementById("max8");
+    var myChart = echarts.init(chartDom);
+    var option;
+    const data = [
+      ["2023-05-07", 113, 72],
+      ["2023-05-11", 355, 79],
+      ["2023-05-15", 109, 92],
+      ["2023-05-19", 250, 69],
+      ["2023-05-23", 326, 90],
+      ["2023-05-27", 302, 142],
+      ["2023-05-01", 311, 74],
+      ["2023-05-05", 304, 113],
+    ];
+    let str = 0
+    for (let i = 0; i < data.length; i++) {
+      str += data[i][1]
+      // console.log(data[i][1]);
+
+    }
+    console.log(str);
+    $('.akkl h3').html(str + 'KB')
+    let str1 = 0
+    for (let i = 0; i < data.length; i++) {
+      str1 += data[i][2]
+      // console.log(data[i][1]);
+
+    }
+    console.log(str);
+    $('.akkl1 h3').html(str1 + 'KB')
+    const dateList = data.map(function (item) {
+      return item[0];
+    });
+    const valueList = data.map(function (item) {
+      return item[1];
+    });
+    const valueList2 = data.map(function (item) {
+      return item[2];
+    });
+    option = {
+      color: ["#94bdf9", "#7dbd3f"],
+      visualMap: [
+        {
+          show: false,
+          type: "continuous",
+          seriesIndex: 0,
+          min: 0,
+          max: 400,
+        },
+      ],
+      legend: {
+        type: "plain",
+        data: ['新增订单',]
+      },
+      title: [
+        {
+          left: "center",
+          text: "",
+        },
+      ],
+      tooltip: {
+        trigger: "axis",
+      },
+      xAxis: [
+        {
+          data: dateList,
+        },
+      ],
+      yAxis: [
+        {
+          name: '单位(笔)',
+          type: "value",
+          axisLabel: {
+            formatter: (value, index) => {
+              return `${value / 1000}k`;
+            },
+          },
+        },
+      ],
+      series: [
+        {
+          name: '新增订单',
+          type: 'bar',
+          smooth: true,
+          showSymbol: false,
+          data: valueList,
+          areaStyle: {
+            color: 'rgba(97, 203, 185,0.3)'
+          },
+        },
+      ],
+    };
+    option && myChart.setOption(option);
+  }
+
+
+
+
+
+
+  function a9() {
+    $("#max9").css("display", "block");
+    $("#max10").css("display", "none");
+    $("#max11").css("display", "none");
+    $("#max12").css("display", "none");
+    var chartDom = document.getElementById("max9");
+    var myChart = echarts.init(chartDom);
+    var option;
+    const data = [
+      ["00:00", 1],
+      ["02:00", 2],
+      ["04:00", 200],
+      ["06:00", 200],
+      ["08:00", 680],
+      ["10:00", 700],
+      ["12:00", 32],
+      ["14:00", 18],
+      ["16:00", 5],
+      ["18:00", 44],
+      ["20:00", 32],
+      ["22:00", 18],
+    ];
+    let str = 0
+    for (let i = 0; i < data.length; i++) {
+      str += data[i][1]
+      // console.log(data[i][1]);
+
+    }
+    console.log(str);
+    $('.akkl h3').html(str + 'KB')
+    const dateList = data.map(function (item) {
+      return item[0];
+    });
+    const valueList = data.map(function (item) {
+      return item[1];
+    });
+    option = {
+      color: ["#61CBB9"],
+      legend: {
+        type: "plain",
+        data: ['成交总额',]
+      },
+      visualMap: [
+        {
+          show: false,
+          type: "continuous",
+          seriesIndex: 0,
+          min: 0,
+          max: 400,
+        },
+      ],
+      title: [
+        {
+          left: "center",
+          text: "",
+        },
+      ],
+      tooltip: {
+        trigger: "axis",
+      },
+      xAxis: [
+        {
+          data: dateList,
+        },
+      ],
+      yAxis: [{
+        name: '单位(元)'
+      }],
+      series: [
+        {
+          name: '成交总额',
+          type: 'line',
+          smooth: true,
+          showSymbol: false,
+          data: valueList,
+          areaStyle: {
+            color: 'rgba(97, 203, 185,0.3)'
+          },
+        },
+      ],
+    };
+    option && myChart.setOption(option);
+  }
+
+  function a10() {
+    $("#max9").css("display", "none");
+    $("#max10").css("display", "block");
+    $("#max11").css("display", "none");
+    $("#max12").css("display", "none");
+    var chartDom = document.getElementById("max10");
+    var myChart = echarts.init(chartDom);
+    var option;
+    const data = [
+      ["00:00", 1],
+      ["02:00", 2],
+      ["04:00", 52],
+      ["06:00", 23],
+      ["08:00", 44],
+      ["10:00", 784],
+      ["12:00", 32],
+      ["14:00", 18],
+      ["16:00", 5],
+      ["18:00", 44],
+      ["20:00", 32],
+      ["22:00", 18],
+    ];
+    let str = 0
+    for (let i = 0; i < data.length; i++) {
+      str += data[i][1]
+      // console.log(data[i][1]);
+
+    }
+    console.log(str);
+    $('.akkl h3').html(str + 'KB')
+    const dateList = data.map(function (item) {
+      return item[0];
+    });
+    const valueList = data.map(function (item) {
+      return item[1];
+    });
+    option = {
+      color: ["#61CBB9"],
+      legend: {
+        type: "plain",
+        data: ['成交总额',]
+      },
+      visualMap: [
+        {
+          show: false,
+          type: "continuous",
+          seriesIndex: 0,
+          min: 0,
+          max: 400,
+        },
+      ],
+      title: [
+        {
+          left: "center",
+          text: "",
+        },
+      ],
+      tooltip: {
+        trigger: "axis",
+      },
+      xAxis: [
+        {
+          data: dateList,
+        },
+      ],
+      yAxis: [{ name: '单位(元)' }],
+      series: [
+        {
+          name: '成交总额',
+          type: 'line',
+          smooth: true,
+          showSymbol: false,
+          data: valueList,
+          areaStyle: {
+            color: 'rgba(97, 203, 185,0.3)'
+          },
+        },
+      ],
+    };
+    option && myChart.setOption(option);
+  }
+
+  function a11() {
+    $("#max9").css("display", "none");
+    $("#max10").css("display", "none");
+    $("#max11").css("display", "block");
+    $("#max12").css("display", "none");
+    var chartDom = document.getElementById("max11");
+    var myChart = echarts.init(chartDom);
+    var option;
+    const data = [
+      ["00:00", 1],
+      ["02:00", 2],
+      ["04:00", 12],
+      ["06:00", 23],
+      ["08:00", 44],
+      ["10:00", 800],
+      ["12:00", 32],
+      ["14:00", 710],
+      ["16:00", 5],
+      ["18:00", 44],
+      ["20:00", 32],
+      ["22:00", 18],
+    ];
+    let str = 0
+    for (let i = 0; i < data.length; i++) {
+      str += data[i][1]
+      // console.log(data[i][1]);
+
+    }
+    console.log(str);
+    $('.akkl h3').html(str + 'KB')
+    const dateList = data.map(function (item) {
+      return item[0];
+    });
+    const valueList = data.map(function (item) {
+      return item[1];
+    });
+    option = {
+      color: ["#61CBB9"],
+      legend: {
+        type: "plain",
+        data: ['成交总额',]
+      },
+      visualMap: [
+        {
+          show: false,
+          type: "continuous",
+          seriesIndex: 0,
+          min: 0,
+          max: 400,
+        },
+      ],
+      title: [
+        {
+          left: "center",
+          text: "",
+        },
+      ],
+      tooltip: {
+        trigger: "axis",
+      },
+      xAxis: [
+        {
+          data: dateList,
+        },
+      ],
+      yAxis: [{ name: '单位(元)' }],
+      series: [
+        {
+          name: '成交总额',
+          type: 'line',
+          smooth: true,
+          showSymbol: false,
+          data: valueList,
+          areaStyle: {
+            color: 'rgba(97, 203, 185,0.3)'
+          },
+        },
+      ],
+    };
+    option && myChart.setOption(option);
+  }
+
+  function a12() {
+    $("#max9").css("display", "none");
+    $("#max10").css("display", "none");
+    $("#max11").css("display", "none");
+    $("#max12").css("display", "block");
+    var chartDom = document.getElementById("max12");
+    var myChart = echarts.init(chartDom);
+    var option;
+    const data = [
+      ["00:00", 1],
+      ["02:00", 2],
+      ["04:00", 12],
+      ["06:00", 23],
+      ["08:00", 900],
+      ["10:00", 44],
+      ["12:00", 32],
+      ["14:00", 700],
+      ["16:00", 5],
+      ["18:00", 44],
+      ["20:00", 32],
+      ["22:00", 18],
+    ];
+    let str = 0
+    for (let i = 0; i < data.length; i++) {
+      str += data[i][1]
+      // console.log(data[i][1]);
+
+    }
+    console.log(str);
+    $('.akkl h3').html(str + 'KB')
+    const dateList = data.map(function (item) {
+      return item[0];
+    });
+    const valueList = data.map(function (item) {
+      return item[1];
+    });
+    option = {
+      color: ["#61CBB9"],
+      legend: {
+        type: "plain",
+        data: ['成交总额',]
+      },
+      visualMap: [
+        {
+          show: false,
+          type: "continuous",
+          seriesIndex: 0,
+          min: 0,
+          max: 400,
+        },
+      ],
+      title: [
+        {
+          left: "center",
+          text: "",
+        },
+      ],
+      tooltip: {
+        trigger: "axis",
+      },
+      xAxis: [
+        {
+          data: dateList,
+        },
+      ],
+      yAxis: [{ name: '单位(元)' }],
+      series: [
+        {
+          name: '成交总额',
+          type: 'line',
+          smooth: true,
+          showSymbol: false,
+          data: valueList,
+          areaStyle: {
+            color: 'rgba(97, 203, 185,0.3)'
+          },
+        },
+      ],
+    };
+    option && myChart.setOption(option);
+  }
+
+</script>
+
+</html>

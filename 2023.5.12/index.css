@@ -1,0 +1,479 @@
+body {
+  width: 100%;
+  background-color: rgb(243, 245, 254);
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+.box-z {
+  width: 100%;
+  height: 150px;
+  display: inline-block;
+}
+.box h3 {
+  margin: 40px 20px;
+}
+.color-0 {
+  width: 200px;
+  height: 150px;
+  display: flex;
+  float: left;
+  margin: 0 50px;
+  border-radius: 25px;
+  background-color: white;
+  flex-direction: column;
+}
+.color-0 h4 {
+  width: 100%;
+  margin-top: 25px;
+  margin-left: 25px;
+  margin-bottom: 10px;
+}
+.color-0 span {
+  font-size: 12px;
+  opacity: 0.5;
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
+.color-0 i {
+  margin-left: 20px;
+  color: rebeccapurple;
+  font-size: 30px;
+  font-style: normal;
+}
+.color-1:hover {
+  cursor: pointer;
+  /* transform属性 */
+  transform: translate(0, -20px);
+}
+.color-2:hover {
+  cursor: pointer;
+  /* transform属性 */
+  transform: translate(0, -20px);
+}
+.color-3:hover {
+  cursor: pointer;
+  /* transform属性 */
+  transform: translate(0, -20px);
+}
+.color-4:hover {
+  cursor: pointer;
+  /* transform属性 */
+  transform: translate(0, -20px);
+}
+.color-5:hover {
+  cursor: pointer;
+  /* transform属性 */
+  transform: translate(0, -20px);
+}
+.color-0:hover {
+  cursor: pointer;
+  /* transform属性 */
+  transform: translate(0, -20px);
+}
+.color-1 {
+  width: 200px;
+  height: 150px;
+  display: 1;
+  float: left;
+  margin: 0 50px;
+  border-radius: 25px;
+  background-color: white;
+  flex-direction: column;
+}
+.color-1 h4 {
+  width: 100%;
+  margin-top: 25px;
+  margin-left: 25px;
+  margin-bottom: 10px;
+}
+.color-1 span {
+  font-size: 12px;
+  opacity: 0.5;
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
+.color-1 i {
+  margin-left: 20px;
+  color: rgb(236, 135, 109);
+  font-size: 30px;
+  font-style: normal;
+}
+.color-2 {
+  width: 200px;
+  height: 150px;
+  display: 1;
+  float: left;
+  margin: 0 50px;
+  border-radius: 25px;
+  background-color: white;
+  flex-direction: column;
+}
+.color-2 h4 {
+  width: 100%;
+  margin-top: 25px;
+  margin-left: 25px;
+  margin-bottom: 10px;
+}
+.color-2 span {
+  font-size: 12px;
+  opacity: 0.5;
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
+.color-2 i {
+  margin-left: 20px;
+  color: rgb(144, 210, 150);
+  font-size: 30px;
+  font-style: normal;
+}
+.color-3 {
+  width: 200px;
+  height: 150px;
+  display: 1;
+  float: left;
+  margin: 0 50px;
+  border-radius: 25px;
+  background-color: white;
+  flex-direction: column;
+}
+.color-3 h4 {
+  width: 100%;
+  margin-top: 25px;
+  margin-left: 25px;
+  margin-bottom: 10px;
+}
+.color-3 span {
+  font-size: 12px;
+  opacity: 0.5;
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
+.color-3 i {
+  margin-left: 20px;
+  color: rgb(117, 125, 237);
+  font-size: 30px;
+  font-style: normal;
+}
+.color-4 {
+  width: 200px;
+  height: 150px;
+  display: 1;
+  float: left;
+  margin: 0 50px;
+  border-radius: 25px;
+  background-color: white;
+  flex-direction: column;
+}
+.color-4 h4 {
+  width: 100%;
+  margin-top: 25px;
+  margin-left: 25px;
+  margin-bottom: 10px;
+}
+.color-4 span {
+  font-size: 12px;
+  opacity: 0.5;
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
+.color-4 i {
+  margin-left: 20px;
+  color: rgb(234, 163, 91);
+  font-size: 30px;
+  font-style: normal;
+}
+.color-5 {
+  width: 200px;
+  height: 150px;
+  display: 1;
+  float: left;
+  margin: 0 50px;
+  border-radius: 25px;
+  background-color: white;
+  flex-direction: column;
+}
+.color-5 h4 {
+  width: 100%;
+  margin-top: 25px;
+  margin-left: 25px;
+  margin-bottom: 10px;
+}
+.color-5 span {
+  font-size: 12px;
+  opacity: 0.5;
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
+.color-5 i {
+  margin-left: 20px;
+  color: rgb(122, 202, 130);
+  font-size: 30px;
+  font-style: normal;
+}
+.box-x {
+  width: 50%;
+  height: 500px;
+  float: left;
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+.box-x .box-c {
+  width: 100%;
+  height: 105px;
+}
+.box-x .box-c h3 {
+  float: left;
+}
+.box-x .box-c button {
+  width: 100px;
+  float: right;
+  text-align: center;
+  height: 60px;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  margin-left: 20px;
+  border-radius: 15px;
+  border: none;
+  color: black;
+  background-color: white;
+}
+.box-v {
+  width: 50%;
+  height: 500px;
+  float: left;
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+.box-v .box-b {
+  width: 100%;
+  height: 105px;
+}
+.box-v .box-b h3 {
+  float: left;
+  margin: 35px;
+}
+.box-v .box-b button {
+  width: 100px;
+  float: right;
+  text-align: center;
+  height: 60px;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  margin-left: 20px;
+  border-radius: 15px;
+  border: none;
+  color: black;
+  background-color: white;
+}
+.box-n {
+  width: 30%;
+  height: 750px;
+  float: left;
+  text-align: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+  margin-bottom: 50px;
+}
+.box-n .box-m {
+  width: 100%;
+  height: 105px;
+}
+#max {
+  background-color: white;
+}
+.box-n .box-m h3 {
+  float: left;
+  margin: 35px;
+}
+.box-n .box-m button {
+  width: 100px;
+  float: right;
+  text-align: center;
+  height: 60px;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  margin-left: 20px;
+  border-radius: 15px;
+  border: none;
+  color: black;
+  background-color: white;
+}
+.box-m span {
+  float: right;
+  margin-top: 40px;
+}
+.z {
+  width: 200px;
+  height: 200px;
+  float: left;
+  margin-left: 70px;
+  background-color: white;
+  border-radius: 20px;
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+}
+.z h4 {
+  margin: 20px;
+}
+.z span {
+  font-size: 25px;
+}
+.z i {
+  margin: 20px;
+}
+.z p {
+  color: red;
+}
+.z:hover {
+  cursor: pointer;
+  /* transform属性 */
+  transform: translate(0, -10px);
+}
+#a1:hover {
+  cursor: pointer;
+  /* transform属性 */
+  transform: translate(0, -10px);
+  background-color: rgb(87, 142, 247);
+  color: white;
+}
+#a2:hover {
+  cursor: pointer;
+  /* transform属性 */
+  transform: translate(0, -10px);
+  background-color: rgb(87, 142, 247);
+  color: white;
+}
+#a3:hover {
+  cursor: pointer;
+  /* transform属性 */
+  transform: translate(0, -10px);
+  background-color: rgb(87, 142, 247);
+  color: white;
+}
+#a4:hover {
+  cursor: pointer;
+  /* transform属性 */
+  transform: translate(0, -10px);
+  background-color: rgb(87, 142, 247);
+  color: white;
+}
+#a5:hover {
+  cursor: pointer;
+  /* transform属性 */
+  transform: translate(0, -10px);
+  background-color: rgb(87, 142, 247);
+  color: white;
+}
+#a6:hover {
+  cursor: pointer;
+  /* transform属性 */
+  transform: translate(0, -10px);
+  background-color: rgb(87, 142, 247);
+  color: white;
+}
+#a7:hover {
+  cursor: pointer;
+  /* transform属性 */
+  transform: translate(0, -10px);
+  background-color: rgb(87, 142, 247);
+  color: white;
+}
+#a8:hover {
+  cursor: pointer;
+  /* transform属性 */
+  transform: translate(0, -10px);
+  background-color: rgb(87, 142, 247);
+  color: white;
+}
+.zxz {
+  width: 70%;
+  height: 800px;
+  float: left;
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+.zxz .zxczxc {
+  width: 100%;
+  height: 105px;
+}
+.zxz .zxczxc span {
+  float: left;
+  margin: 35px;
+}
+.zxz .zxczxc button {
+  width: 100px;
+  float: right;
+  text-align: center;
+  height: 60px;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  margin-left: 20px;
+  border-radius: 15px;
+  border: none;
+  color: black;
+  background-color: white;
+}
+#max9 {
+  width: 70%;
+}
+#a9:hover {
+  cursor: pointer;
+  /* transform属性 */
+  transform: translate(0, -10px);
+  background-color: rgb(87, 142, 247);
+  color: white;
+}
+#a10:hover {
+  cursor: pointer;
+  /* transform属性 */
+  transform: translate(0, -10px);
+  background-color: rgb(87, 142, 247);
+  color: white;
+}
+#a11:hover {
+  cursor: pointer;
+  /* transform属性 */
+  transform: translate(0, -10px);
+  background-color: rgb(87, 142, 247);
+  color: white;
+}
+#a12:hover {
+  cursor: pointer;
+  /* transform属性 */
+  transform: translate(0, -10px);
+  background-color: rgb(87, 142, 247);
+  color: white;
+}
+.q {
+  background-color: rgb(87, 142, 247) !important;
+  color: white;
+}
+.w {
+  background-color: rgb(87, 142, 247) !important;
+  color: white;
+}
+.s {
+  background-color: rgb(87, 142, 247) !important;
+  color: white;
+}
